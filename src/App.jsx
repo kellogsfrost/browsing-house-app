@@ -10,8 +10,16 @@ import {
 
 class App extends React.Component {
   state = {
-
+    cityList: {},
+    schoolList: {}
   }
+
+
+
+  
+
+
+
   render() {
     return (
 
