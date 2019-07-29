@@ -1,6 +1,8 @@
 import React from 'react';
 import Home from './Home'
+import DisplayMap from './DisplayMap';
 import axios from 'axios';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -43,6 +45,7 @@ class App extends React.Component {
           <Link  to='/'>HOME</Link>{' '}
           <Link  to='/city'>CityList</Link>{' '}
           <Link  to='/show'>Show</Link>{''}
+          <Link to ='/map'>Map</Link>
         </nav>
         {/* <Route exact path='/' component={Home} />
         
@@ -51,7 +54,7 @@ class App extends React.Component {
       
         <Route exact path='/show'/> */}
 
-
+        <Route exact path='/map/' render={(props)=> <DisplayMap {...props} />} />
 
       </Router>
 
