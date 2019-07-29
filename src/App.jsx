@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from './Home'
-import DisplayMap from './DisplayMap';
+import NeighborhoodList from './NeighborhoodList'
+import Show from './Show'
 import axios from 'axios';
-
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -18,13 +18,12 @@ class App extends React.Component {
   }
 
 
-  
   componentDidMount() {
-    axios.get('https://api.placeilive.com/v1/houses/search?q=newyork%204')
+    axios.get('https://api.schooldigger.com/v1.2/schools?st=NY&q=Brooklyn&appID=b684e7a3&appKey=8851828265cb952a8d799c60acdb852a')
       .then(result => {
         console.log(result)
         this.setState({
-          issues: result.data
+          school: result.data
         })
       })
   }
@@ -38,23 +37,24 @@ class App extends React.Component {
 
 
       <>
-        <Home />
+        {/* <Home />
+        <Show />
+        <NeighborhoodList /> */}
 
         <Router>
         <nav>
           <Link  to='/'>HOME</Link>{' '}
           <Link  to='/city'>CityList</Link>{' '}
           <Link  to='/show'>Show</Link>{''}
-          <Link to ='/map'>Map</Link>
         </nav>
-        {/* <Route exact path='/' component={Home} />
         
-        <Route exact path='/city' render={() => <  />} />
+        <Route exact path='/' render={() => <Home procedures={this.state.procedures} />} />
 
-      
-        <Route exact path='/show'/> */}
+        <Route exact path='/city' render={() => <NeighborhoodList procedures={this.state.procedures} />} />
 
-        <Route exact path='/map/' render={(props)=> <DisplayMap {...props} />} />
+        
+        <Route exact path='/show' render={(props) => <Show {...props}/>}/>
+
 
       </Router>
 
