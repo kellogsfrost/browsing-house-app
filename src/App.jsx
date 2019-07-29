@@ -46,7 +46,7 @@ class App extends React.Component {
           <Link  to='/'>HOME</Link>{' '}
           <Link  to='/city'>CityList</Link>{' '}
           <Link  to='/show'>Show</Link>{''}
-          <Link  to ='/map'>Map</Link>
+          
 
         </nav>
         
