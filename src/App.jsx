@@ -46,13 +46,6 @@ class App extends React.Component {
         <NeighborhoodList /> */}
 
         <Router>
-          <nav className="nav">
-            <Link to='/'>HOME</Link>{' '}
-            <Link to='/city'>CityList</Link>{' '}
-            <Link to='/show'>Show</Link>{''}
-
-
-          </nav>
 
           <Route exact path='/' render={() => <Home procedures={this.state.procedures} />} />
           
