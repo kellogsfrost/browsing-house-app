@@ -14,45 +14,81 @@ import {
             super(props);
             this.state = {
                 lng: '',
-                lat: ''
+                lat: '',
+                showMenu: false
             }
+            this.showMenu = this.showMenu.bind(this);
+            this.closeMenu = this.closeMenu.bind(this);
         }
+        showMenu(event) {
+            event.preventDefault();
+            
+            this.setState({ showMenu: true }, () => {
+              document.addEventListener('click', this.closeMenu);
+            });
+          }
+          
+          closeMenu(event) {
+            
+            if (!this.dropdownMenu.contains(event.target)) {
+              
+              this.setState({ showMenu: false }, () => {
+                document.removeEventListener('click', this.closeMenu);
+              });  
+              
+            }
+          }
+        
     render() {
         let lng = this.state.lng ? this.state.lng : 73.9442
-		let lat = this.state.lat ? this.state.lat : 40.6711
+		let lat = this.state.lat ? this.state.lat : 40.6782
 
 		const Map = new ReactMapboxGl({
 			accessToken: 'pk.eyJ1IjoibWNkdWRsZXk4NyIsImEiOiJjanhlejR5YWIwdWFwM25tcHNubDdpejIwIn0.n-RmlJrsycjQ76M82M_02Q',
 			container: 'map',
 			minZoom: 12,
-			maxZoom: 16
+			maxZoom: 12
 		},		
 	);
 
 	return (
 			<>
-				<div className="mapboxBox">
-					<Map
-						center={[-73.9442, 40.6782]}
-						style="mapbox://styles/mapbox/streets-v9"
-						containerStyle={{
-							height: '800px',
-							width: '800px'
-						}}>
-              
-					</Map>
-				</div>
-			
-	
-	
-         
-            <div>
-                <h3>NYC | London | San Fransisco | Berlin</h3>
-            </div>
-           <div>
-               <h4>Queens, Brooklyn, Manhatten, Bronx and Staten Island </h4>
-            </div>
-            
+			  <div>
+        <button onClick={this.showMenu}>
+        NYC
+        </button>
+        <button>
+            London
+        </button>
+        <button>
+            San Fransisco
+        </button>
+        <button>
+            Berlin
+        </button>
+        
+        {
+          this.state.showMenu
+            ? (
+              <div
+                className="menu"
+                ref={(element) => {
+                  this.dropdownMenu = element;
+                }}
+              >
+                <button> Queens </button>
+                <button> Brooklyn </button>
+                <button> Manhatten </button>
+                <button> Bronx </button>
+                <button> Staten Island </button>
+
+              </div>
+            )
+            : (
+              null
+            )
+        }
+      </div>
             <div className="themes">
                 <div>
                     Transportation 
@@ -83,72 +119,24 @@ import {
            <input type="submit"></input>
                 </Link>
            </footer>
+				<div className="homeMap">
+					<Map
+						center={[-73.9442, 40.6782]}
+						style="mapbox://styles/mapbox/streets-v9"
+						containerStyle={{
+							height: '600px',
+							width: '500px'
+						}}>
+              
+					</Map>
+				</div>
+	
            </>
         )
     }
 }
 
 
-export default Home
-=======
-import React, { Component } from 'react'
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-
-  } from 'react-router-dom';
-  import ReactDOM from 'react-dom'
-
-
-    class Home extends Component {
-    render() {
-        return (
-            <>
-                <div>
-
-                    <h3>NYC | London | San Fransisco | Berlin</h3>
-                    Transportation 
-                    var element = <i class="far fa-check-circle"></i>
-                </div>
-                <div>
-                    <h4>Queens, Brooklyn, Manhatten, Bronx and Staten Island </h4>
-                </div>
-
-                <div className="themes">
-                    <div>
-                        Transportation
-                    <i class="far fa-check-circle"></i>
-                    </div>
-                    <div>
-                        Daily Life
-                </div>
-                    <div>
-                        Safety
-                </div>
-                    <div>
-                        Health
-                </div>
-                    <div>
-                        Sports/Leisure
-                </div>
-                    <div>
-                        Entertainment
-                </div>
-                    <div>
-                        Community
-                </div>
-                </div>
-                <footer>
-                    Find my area!{''}
-                    <Link to={'/show/'}>
-                        <input type="submit"></input>
-                    </Link>
-                </footer>
-            </>
-        )
-    }
-}
 
 
 export default Home
