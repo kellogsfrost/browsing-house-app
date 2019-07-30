@@ -1,5 +1,6 @@
-.background{
-  background: #D1BB8D;
+body{
+  background-color: #D1BB8D;
+
 }
 .App {
   text-align: center;
@@ -18,12 +19,17 @@
 
 ul {
   margin-top: 80px;
+  border-radius: 50%;
+  background-color: rgba(22, 202, 22, 0.4);
 }
 
 .mytrips {
+  background-image: url('./img/Bedstuy.jpg');
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
   border-radius: 100%;
-  background-color: rgba(32, 195, 32, 0.5);
-  border: 1px solid black;
   height: 300px;
   width: 20%;
   margin-top: 25px;
@@ -31,24 +37,27 @@ ul {
   
 }
 
-/* 
+
+
 .mytriptwo {
+  background-image: url('./img/Williamsburg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 100%;
-  background-color: rgba(32, 195, 32, 0.5);
-  border: 1px solid black;
-  height: 200px;
-  width: 15%;
+  height: 300px;
+  width: 20%;
   margin-bottom: 25px;
 }
 
 
 .mytripthree {
+  background-image: url('./img/Park.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border-radius: 100%;
-  background-color: rgba(32, 195, 32, 0.5);
-  border: 1px solid black;
-  height: 200px;
-  width: 15%;
-} */
+  height: 300px;
+  width: 20%;
+} 
 
 
 
@@ -63,7 +72,9 @@ ul {
 }
 
 .nav {
-  border: 1px solid black;
+  background-color:  rgba(12, 14, 12, 0.4);
+  height: 50px;
+  
 }
 
 
