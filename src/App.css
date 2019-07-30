@@ -7,16 +7,26 @@ body{
 }
 
 .transport {
-  height: 30px;
+  height: 40px;
+  width: 35px;
+  background-color: #90C255;
+  border-radius: 22px;
 }
 
 .circle {
-height: 30px;
-width: 30px;
+height: 40px;
+width: 35px;
 }
 
 .themes {
-font-size: 40px;
+font-size: 68px;
+}
+
+.submit {
+font-size: 50px;
+color: #90C255;
+background-color: #D1BB8D;
+border: none;
 }
 
 
@@ -124,7 +134,7 @@ text-align: center;
 
 .homeMap {
   display: flex;
- 
+  float: right;
 
 }
 
