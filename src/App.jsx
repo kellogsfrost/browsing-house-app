@@ -15,8 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      neighborhoodList: {park:'park slope', stuy:'bed stuy', green:'green point'},
-      
+      neighborhoodList: ['park slope', 'bed stuy','green point'],
       schoolList: '',
     }
   }
@@ -60,7 +59,7 @@ class App extends React.Component {
 
           {/* <NeighborhoodList  list={this.state.NeighborhoodList }/> */}
 
-          <Route exact path='/city' render={(props) => <NeighborhoodList {...props} list={this.state.neighborhoodList} />} />
+          <Route exact path='/city' render={(props) => <NeighborhoodList {...props} lists={this.state.neighborhoodList} />} />
 
 
           <Route exact path='/show' render={(props) => <Show {...props} />} />

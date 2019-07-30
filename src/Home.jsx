@@ -5,8 +5,8 @@ import {
     BrowserRouter as Router,
     Route,
     Link
-  } from 'react-router-dom';
-  import ReactDOM from 'react-dom'
+} from 'react-router-dom';
+import ReactDOM from 'react-dom'
 
 
     class Home extends Component {
@@ -136,8 +136,4 @@ import {
     }
 }
 
-
-
-
 export default Home
-
