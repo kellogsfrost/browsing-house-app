@@ -4,10 +4,7 @@ import {
     Route,
     Link
   } from 'react-router-dom';
-  import ReactDOM from 'react-dom'
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-  var element = "far fa-check-circle"
+import check from './check.svg'
 
     class Home extends Component {
     render() {
@@ -22,8 +19,8 @@ import {
             
             <div className="themes">
                 <div>
+                <img src="/src/check.svg" alt="" />
                     Transportation 
-                    var element = <i class="far fa-check-circle"></i>
                 </div>
                 <div>
                     Daily Life
