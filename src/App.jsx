@@ -13,7 +13,7 @@ import {
 
 class App extends React.Component {
   state = {
-    cityList: '',
+    neighborhoodList: ['park slope','bed stuy', 'green point'],
     schoolList: '',
   }
 
@@ -52,7 +52,7 @@ class App extends React.Component {
         
         <Route exact path='/' render={() => <Home procedures={this.state.procedures} />} />
 
-        <Route exact path='/city' render={() => <NeighborhoodList procedures={this.state.procedures} />} />
+        <Route exact path='/city' render={() => <NeighborhoodList  neighborhoodList={this.state.neighborhoodList} />} />
 
         
         <Route exact path='/show' render={(props) => <Show {...props}/>}/>
