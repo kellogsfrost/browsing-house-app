@@ -150,6 +150,7 @@ text-align: center;
 .homeMap {
   display: flex;
   float: right;
+  margin-top: 60px;
 }
 
 .stateButton {
