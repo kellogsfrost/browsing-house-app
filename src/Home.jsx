@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {ReactComponent as Logo} from './check.svg';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
-import {ReactComponent as Bus} from './bus.svg';
 import {
     BrowserRouter as Router,
     Route,
