@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
+import {ReactComponent as Bus} from './bus.svg';
 import {
     BrowserRouter as Router,
     Route,
@@ -17,7 +18,7 @@ import ReactDOM from 'react-dom'
                 showMenu: false
             }
             this.showMenu = this.showMenu.bind(this);
-            this.closeMenu = this.closeMenu.bind(this);
+            //this.closeMenu = this.closeMenu.bind(this);
         }
         showMenu(event) {
             event.preventDefault();
@@ -27,16 +28,16 @@ import ReactDOM from 'react-dom'
             });
           }
           
-          closeMenu(event) {
+        //   closeMenu(event) {
             
-            if (!this.dropdownMenu.contains(event.target)) {
+        //     if (!this.dropdownMenu.contains(event.target)) {
               
-              this.setState({ showMenu: false }, () => {
-                document.removeEventListener('click', this.closeMenu);
-              });  
+        //       this.setState({ showMenu: false }, () => {
+        //         document.removeEventListener('click', this.closeMenu);
+        //       });  
               
-            }
-          }
+        //     }
+        //   }
         
     render() {
         let lng = this.state.lng ? this.state.lng : 73.9442
@@ -45,8 +46,8 @@ import ReactDOM from 'react-dom'
 		const Map = new ReactMapboxGl({
 			accessToken: 'pk.eyJ1IjoibWNkdWRsZXk4NyIsImEiOiJjanhlejR5YWIwdWFwM25tcHNubDdpejIwIn0.n-RmlJrsycjQ76M82M_02Q',
 			container: 'map',
-			minZoom: 12,
-			maxZoom: 12
+			minZoom: 10,
+			maxZoom: 10
 		},		
 	);
 
@@ -60,10 +61,10 @@ import ReactDOM from 'react-dom'
             London |
         </button>
         <button className='stateButton'>
-            San Fransisco |
+            San Francisco |
         </button>
         <button className='stateButton'>
-            Berlin |
+            Berlin 
         </button>
         
         {
@@ -76,7 +77,9 @@ import ReactDOM from 'react-dom'
                 }}
               >
                 <button className='cityButton'> Queens </button>
+                <Link to={'/city/'}>
                 <button className='cityButton'> Brooklyn </button>
+                </Link>
                 <button className='cityButton'> Manhatten </button>
                 <button className='cityButton'> Bronx </button>
                 <button className='cityButton'> Staten Island </button>
@@ -91,7 +94,6 @@ import ReactDOM from 'react-dom'
             <div className="themes">
                 <div>
                     Transportation 
-                    var element = <i class="far fa-check-circle"></i>
                 </div>
                 <div>
                     Daily Life
