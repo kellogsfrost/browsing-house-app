@@ -1,4 +1,10 @@
 import React, { Component } from 'react'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
+  
 
 export class Home extends Component {
     render() {
@@ -35,8 +41,12 @@ export class Home extends Component {
                     Community
                 </div>
             </div>
-
-            <footer></footer>
+            <footer>
+                Find my area!{''}
+                <Link to={'/show/'}>  
+           <input type="submit"></input>
+                </Link>
+           </footer>
            </>
         )
     }
