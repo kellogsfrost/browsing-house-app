@@ -98,7 +98,7 @@ import {
 						center={[-73.9442, 40.6782]}
 						style="mapbox://styles/mapbox/streets-v9"
 						containerStyle={{
-							height: '1200px',
+							height: '1000px',
 							width: '800px'
 						}}>
 					</Map>
