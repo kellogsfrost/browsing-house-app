@@ -5,25 +5,60 @@
 
 .Tripflex {
   display: flex;
-  justify-content: center;
-  padding-top: 1%;
+  flex-direction: column;
+  
 }
 
-
+ul {
+  margin-top: 80px;
+}
 
 .mytrips {
+  border-radius: 100%;
+  background-color: rgba(32, 195, 32, 0.5);
+  border: 1px solid black;
+  height: 300px;
+  width: 20%;
+  margin-top: 25px;
+  margin-bottom: 25px;
   
+}
+
+/* 
+.mytriptwo {
   border-radius: 100%;
   background-color: rgba(32, 195, 32, 0.5);
   border: 1px solid black;
   height: 200px;
   width: 15%;
+  margin-bottom: 25px;
 }
 
+
+.mytripthree {
+  border-radius: 100%;
+  background-color: rgba(32, 195, 32, 0.5);
+  border: 1px solid black;
+  height: 200px;
+  width: 15%;
+} */
+
+
+
+.bedstuys {
+  padding-top: 80px
+}
 
 .Tripname {
-  padding-top: 50px
+  padding-top: 50px;
+  padding-left: 300px;
+  
 }
+
+.nav {
+  border: 1px solid black;
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

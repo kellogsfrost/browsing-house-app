@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      neighborhoodList: ['park slope', 'bed stuy','green point'],
+      neighborhoodList: ['Park_Slope', 'Bedstuy','Willimsburg'],
       schoolList: '',
     }
   }
@@ -46,7 +46,7 @@ class App extends React.Component {
         <NeighborhoodList /> */}
 
         <Router>
-          <nav>
+          <nav className="nav">
             <Link to='/'>HOME</Link>{' '}
             <Link to='/city'>CityList</Link>{' '}
             <Link to='/show'>Show</Link>{''}
