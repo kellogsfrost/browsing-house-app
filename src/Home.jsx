@@ -19,8 +19,7 @@ import {
             
             <div className="themes">
                 <div>
-                    <Logo className="transport"></Logo>
-                    Transportation 
+                    <Logo className="transport"></Logo>Transportation
                 </div>
                 <div>
                     Daily Life
