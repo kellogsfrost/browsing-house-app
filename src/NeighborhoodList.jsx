@@ -19,7 +19,7 @@ const NeighborhoodList = props => (
 
             </div>
 
-            <div className="mytrips">
+            <div className="mytriptwo">
 
                 <ul>
                     <li>Transportation</li>
@@ -34,7 +34,7 @@ const NeighborhoodList = props => (
             </div>
 
 
-            <div className="mytrips">
+            <div className="mytripthree">
 
                 <ul>
                     <li>Transportation</li>
