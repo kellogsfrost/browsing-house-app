@@ -48,7 +48,7 @@ import {
 			accessToken: 'pk.eyJ1IjoibWNkdWRsZXk4NyIsImEiOiJjanhlejR5YWIwdWFwM25tcHNubDdpejIwIn0.n-RmlJrsycjQ76M82M_02Q',
 			container: 'map',
 			minZoom: 10,
-			maxZoom: 10
+			maxZoom: 18
 		},		
 	);
 
@@ -56,6 +56,7 @@ import {
         <>
             <div className='background'>
 			  <div>
+                  <nav className="nav">
         <button className='stateButton' onClick={this.showMenu}>
         NYC |
         </button>
@@ -92,12 +93,13 @@ import {
               null
             )
         }
+        </nav>
         	<Map className="homeMap"
 						center={[-73.9442, 40.6782]}
 						style="mapbox://styles/mapbox/streets-v9"
 						containerStyle={{
-							height: '800px',
-							width: '600px'
+							height: '1200px',
+							width: '800px'
 						}}>
 					</Map>
       </div>
