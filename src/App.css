@@ -124,8 +124,7 @@ text-align: center;
 
 .homeMap {
   display: flex;
- 
-
+  float: right;
 }
 
 .stateButton {
@@ -149,4 +148,11 @@ text-align: center;
   height: 100px;
   width: 120px;
   color: #90C255
+}
+
+.icons{
+  display: inline-flex;
+}
+.description{
+  font-size: 24px;
 }
