@@ -1,18 +1,50 @@
 import React, { Component } from 'react'
+import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import {
     BrowserRouter as Router,
     Route,
     Link
   } from 'react-router-dom';
   import ReactDOM from 'react-dom'
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-  var element = "far fa-check-circle"
+
 
     class Home extends Component {
+        constructor(props){
+            super(props);
+            this.state = {
+                lng: '',
+                lat: ''
+            }
+        }
     render() {
-        return (
-            <>
+        let lng = this.state.lng ? this.state.lng : 73.9442
+		let lat = this.state.lat ? this.state.lat : 40.6711
+
+		const Map = new ReactMapboxGl({
+			accessToken: 'pk.eyJ1IjoibWNkdWRsZXk4NyIsImEiOiJjanhlejR5YWIwdWFwM25tcHNubDdpejIwIn0.n-RmlJrsycjQ76M82M_02Q',
+			container: 'map',
+			minZoom: 12,
+			maxZoom: 16
+		},		
+	);
+
+	return (
+			<>
+				<div className="mapboxBox">
+					<Map
+						center={[-73.9442, 40.6782]}
+						style="mapbox://styles/mapbox/streets-v9"
+						containerStyle={{
+							height: '800px',
+							width: '800px'
+						}}>
+              
+					</Map>
+				</div>
+			
+	
+	
+         
             <div>
                 <h3>NYC | London | San Fransisco | Berlin</h3>
             </div>
