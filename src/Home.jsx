@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
+import {ReactComponent as Logo} from './check.svg';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import {ReactComponent as Bus} from './bus.svg';
 import {
     BrowserRouter as Router,
     Route,
     Link
-} from 'react-router-dom';
-import ReactDOM from 'react-dom'
-
+  } from 'react-router-dom';
 
     class Home extends Component {
         constructor(props){
@@ -93,6 +92,7 @@ import ReactDOM from 'react-dom'
       </div>
             <div className="themes">
                 <div>
+                    <Logo className="transport"></Logo>
                     Transportation 
                 </div>
                 <div>
@@ -120,21 +120,10 @@ import ReactDOM from 'react-dom'
            <input type="submit"></input>
                 </Link>
            </footer>
-				<div className="homeMap">
-					<Map
-						center={[-73.9442, 40.6782]}
-						style="mapbox://styles/mapbox/streets-v9"
-						containerStyle={{
-							height: '600px',
-							width: '500px'
-						}}>
-              
-					</Map>
-				</div>
-	
            </>
         )
     }
 }
+
 
 export default Home
