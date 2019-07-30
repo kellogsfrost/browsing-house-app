@@ -54,17 +54,17 @@ import {
 	return (
 			<>
 			  <div>
-        <button onClick={this.showMenu}>
-        NYC
+        <button className='stateButton' onClick={this.showMenu}>
+        NYC |
         </button>
-        <button>
-            London
+        <button className='stateButton'>
+            London |
         </button>
-        <button>
-            San Fransisco
+        <button className='stateButton'>
+            San Fransisco |
         </button>
-        <button>
-            Berlin
+        <button className='stateButton'>
+            Berlin |
         </button>
         
         {
@@ -76,11 +76,11 @@ import {
                   this.dropdownMenu = element;
                 }}
               >
-                <button> Queens </button>
-                <button> Brooklyn </button>
-                <button> Manhatten </button>
-                <button> Bronx </button>
-                <button> Staten Island </button>
+                <button className='cityButton'> Queens </button>
+                <button className='cityButton'> Brooklyn </button>
+                <button className='cityButton'> Manhatten </button>
+                <button className='cityButton'> Bronx </button>
+                <button className='cityButton'> Staten Island </button>
 
               </div>
             )
