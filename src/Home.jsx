@@ -99,7 +99,7 @@ import {
 						style="mapbox://styles/mapbox/streets-v9"
 						containerStyle={{
 							height: '1000px',
-							width: '800px'
+							width: '750px'
 						}}>
 					</Map>
       </div>
