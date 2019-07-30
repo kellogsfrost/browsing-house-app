@@ -12,23 +12,28 @@ import {
 
 
 class App extends React.Component {
-  state = {
-    neighborhoodList: ['park slope','bed stuy', 'green point'],
-    schoolList: '',
+  constructor(props) {
+    super(props);
+    this.state = {
+      neighborhoodList: {park:'park slope', stuy:'bed stuy', green:'green point'},
+      
+      schoolList: '',
+    }
   }
 
 
-  componentDidMount() {
-    axios.get('https://api.schooldigger.com/v1.2/schools?st=NY&q=Brooklyn&appID=b684e7a3&appKey=8851828265cb952a8d799c60acdb852a')
-      .then(result => {
-        console.log(result)
-        this.setState({
-          school: result.data
-        })
-      })
-  }
 
-  
+  // componentDidMount() {
+  //   axios.get('https://api.schooldigger.com/v1.2/schools?st=NY&q=Brooklyn&appID=b684e7a3&appKey=8851828265cb952a8d799c60acdb852a')
+  //     .then(result => {
+  //       console.log(result)
+  //       this.setState({
+  //         school: result.data
+  //       })
+  //     })
+  // }
+
+
 
 
 
@@ -42,23 +47,26 @@ class App extends React.Component {
         <NeighborhoodList /> */}
 
         <Router>
-        <nav>
-          <Link  to='/'>HOME</Link>{' '}
-          <Link  to='/city'>CityList</Link>{' '}
-          <Link  to='/show'>Show</Link>{''}
+          <nav>
+            <Link to='/'>HOME</Link>{' '}
+            <Link to='/city'>CityList</Link>{' '}
+            <Link to='/show'>Show</Link>{''}
+
+
+          </nav>
+
+          <Route exact path='/' render={() => <Home procedures={this.state.procedures} />} />
           
 
-        </nav>
-        
-        <Route exact path='/' render={() => <Home procedures={this.state.procedures} />} />
+          {/* <NeighborhoodList  list={this.state.NeighborhoodList }/> */}
 
-        <Route exact path='/city' render={() => <NeighborhoodList  neighborhoodList={this.state.neighborhoodList} />} />
-
-        
-        <Route exact path='/show' render={(props) => <Show {...props}/>}/>
+          <Route exact path='/city' render={(props) => <NeighborhoodList {...props} list={this.state.neighborhoodList} />} />
 
 
-      </Router>
+          <Route exact path='/show' render={(props) => <Show {...props} />} />
+
+
+        </Router>
 
 
       </>

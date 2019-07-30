@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 const NeighborhoodList = props => (
     <>
 
+        {props.list.park}
 
-        {props.props.neighborhoodList.map()}
+        {/* {props.props.neighborhoodList.map()}
         <div className="Tripflex">
             <div className="mytrips">
                 <Link to={`/show/`}> {' '}
@@ -13,7 +14,7 @@ const NeighborhoodList = props => (
                 </Link>
                 <button >Click</button>
             </div>
-        </div>
+        </div> */}
 
 
         {/* 
