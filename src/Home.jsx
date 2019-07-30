@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import {

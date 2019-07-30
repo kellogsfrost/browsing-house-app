@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 const NeighborhoodList = props => (
     <>
 
-
         {props.lists.map((list, i) => {
             return (
                 <div className="Tripflex">
@@ -25,12 +24,14 @@ const NeighborhoodList = props => (
 
 
 
-        {/* 
-<button>Go!</button><div className="park">ParkSlope</div>
-<button>Go!</button><div className="bed">Bed Stuy</div>
-<button>Go!</button><div className="green">Green Point</div> */}
     </>
+
 )
+        
+/*<button>Go!</button><div className="park">ParkSlope</div>
+<button>Go!</button><div className="bed">Bed Stuy</div>
+<button>Go!</button><div className="green">Green Point</div>*/
+
 
 
 export default NeighborhoodList;
