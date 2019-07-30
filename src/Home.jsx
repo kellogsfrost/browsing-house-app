@@ -95,7 +95,7 @@ import {
                     <Logo className="transport"></Logo>Transportation
                 </div>
                 <div>
-                    Daily Life
+                    <Logo className="transport"></Logo>Daily Life
                 </div>
                 <div>
                     Safety
@@ -110,7 +110,8 @@ import {
                     Entertainment
                 </div>
                 <div>
-                    Community
+                <Logo className="transport"></Logo>Community
+
                 </div>
             </div>
             <footer>
