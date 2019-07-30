@@ -90,6 +90,14 @@ import {
               null
             )
         }
+        	<Map className=""
+						center={[-73.9442, 40.6782]}
+						style="mapbox://styles/mapbox/streets-v9"
+						containerStyle={{
+							height: '800px',
+							width: '800px'
+						}}>
+					</Map>
       </div>
             <div className="themes">
                 <div>
