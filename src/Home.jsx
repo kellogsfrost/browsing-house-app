@@ -54,7 +54,7 @@ import {
         <>
             <div className='background'>
 			  <div>
-                  <nav>
+                  <nav className="nav">
         <button className='stateButton' onClick={this.showMenu}>
         NYC |
         </button>
