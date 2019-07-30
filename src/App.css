@@ -69,9 +69,11 @@ text-align: center;
 
 .stateButton {
   border: none;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .cityButton {
-
+  border: none;
+  font-size: 20px;
 }
+
