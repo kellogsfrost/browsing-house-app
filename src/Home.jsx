@@ -54,6 +54,6 @@ import {
         )
     }
 }
-ReactDOM.render(element, document.body)
+
 
 export default Home
