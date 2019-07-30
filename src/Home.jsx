@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import {ReactComponent as Logo} from './check.svg';
 import {
     BrowserRouter as Router,
     Route,
     Link
   } from 'react-router-dom';
-import check from './check.svg'
 
     class Home extends Component {
     render() {
@@ -19,7 +19,7 @@ import check from './check.svg'
             
             <div className="themes">
                 <div>
-                <img src="/src/check.svg" alt="" />
+                    <Logo className="transport"></Logo>
                     Transportation 
                 </div>
                 <div>
