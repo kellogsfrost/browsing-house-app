@@ -40,7 +40,7 @@ class Show extends React.Component {
 
 	return (
 			<>
-				<div className="mapboxBox">
+				<div className="showMap">
 					<Map
 						center={[-73.9442, 40.6782]}
 						style="mapbox://styles/mapbox/streets-v9"
