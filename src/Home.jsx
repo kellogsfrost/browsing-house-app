@@ -4,9 +4,12 @@ import {
     Route,
     Link
   } from 'react-router-dom';
-  
+  import ReactDOM from 'react-dom'
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+  var element = "far fa-check-circle"
 
-export class Home extends Component {
+    class Home extends Component {
     render() {
         return (
             <>
@@ -20,7 +23,7 @@ export class Home extends Component {
             <div className="themes">
                 <div>
                     Transportation 
-                    <i class="far fa-check-circle"></i> 
+                    var element = <i class="far fa-check-circle"></i>
                 </div>
                 <div>
                     Daily Life
@@ -51,5 +54,6 @@ export class Home extends Component {
         )
     }
 }
+ReactDOM.render(element, document.body)
 
 export default Home
