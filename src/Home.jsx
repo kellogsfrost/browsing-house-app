@@ -14,11 +14,13 @@ import {
             this.state = {
                 lng: '',
                 lat: '',
-                showMenu: false
+                showMenu: false,
+                active: false
             }
             this.showMenu = this.showMenu.bind(this);
             //this.closeMenu = this.closeMenu.bind(this);
         }
+       
         showMenu(event) {
             event.preventDefault();
             
@@ -103,10 +105,10 @@ import {
       </div>
             <div className="themes">
                 <div>
-                    <Logo className="transport"></Logo>Transportation
+                <Circle className="transport"></Circle>Transportation
                 </div>
                 <div>
-                    <Logo className="transport"></Logo>Daily Life
+                <Circle className="transport"></Circle>Daily Life
                 </div>
                 <div>
                     <Circle className="circle"></Circle>Safety
@@ -121,18 +123,13 @@ import {
                     <Circle className="circle"></Circle>Entertainment
                 </div>
                 <div>
-                <Logo className="transport"></Logo>Community
+                <Circle className="transport"></Circle>Community
 
                 </div>
-            
-            <footer>
-                Find my area!{''}
-                <Link to={'/show/'}>  
-           <input type="submit"></input>
-                </Link>
-           </footer>
+                        
            </div>
            </div>
+           
            </>
         )
     }
