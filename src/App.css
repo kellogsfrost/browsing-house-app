@@ -29,17 +29,28 @@ background-color: #D1BB8D;
 border: none;
 }
 
+.hood {
+  text-align: center;
+}
 
 .Tripflex {
   display: flex;
   flex-direction: column;
+  padding-bottom: -300px;
   
 }
 
 ul {
   margin-top: 80px;
-  border-radius: 50%;
-  background-color: rgba(22, 202, 22, 0.4);
+  padding-bottom: 25px;
+}
+
+p {
+  padding-left: 20px;
+  background-color: rgba(12, 14, 12, 0.6);
+  color: white;
+  width: 75%;
+  
 }
 
 .mytrips {
@@ -49,7 +60,7 @@ ul {
   background-repeat: no-repeat;
   
   border-radius: 100%;
-  height: 300px;
+  height: 400px;
   width: 20%;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -63,7 +74,7 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 100%;
-  height: 300px;
+  height: 400px;
   width: 20%;
   margin-bottom: 25px;
 }
@@ -74,7 +85,7 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 100%;
-  height: 300px;
+  height: 400px;
   width: 20%;
 } 
 
@@ -84,10 +95,11 @@ ul {
   padding-top: 80px
 }
 
-.Tripname {
-  padding-top: 50px;
-  padding-left: 300px;
-  
+.tripname {
+text-align: center;
+font-size: 50px;
+
+
 }
 
 .nav {
