@@ -3,15 +3,20 @@ import {
     BrowserRouter as Router,
     Route,
     Link
-} from 'react-router-dom';
+
+  } from 'react-router-dom';
+  import ReactDOM from 'react-dom'
 
 
-export class Home extends Component {
+    class Home extends Component {
     render() {
         return (
             <>
                 <div>
+
                     <h3>NYC | London | San Fransisco | Berlin</h3>
+                    Transportation 
+                    var element = <i class="far fa-check-circle"></i>
                 </div>
                 <div>
                     <h4>Queens, Brooklyn, Manhatten, Bronx and Staten Island </h4>
@@ -51,5 +56,6 @@ export class Home extends Component {
         )
     }
 }
+
 
 export default Home
