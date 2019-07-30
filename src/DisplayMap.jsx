@@ -27,7 +27,7 @@ class Map extends React.Component {
 	// }
 
 	render () {
-		let lng = this.state.lng ? this.state.lng : 73.9442
+		let lng = this.state.lng ? this.state.lng : 73.9814
 		let lat = this.state.lat ? this.state.lat : 40.6711
 
 		const Map = new ReactMapboxGl({
