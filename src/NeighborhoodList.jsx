@@ -3,48 +3,52 @@ import { Link } from 'react-router-dom'
 
 const NeighborhoodList = props => (
     <>
-
+        <h1 className='hood'>Your Recommended Neighborhoods</h1>
 
         <div className="Tripflex">
-            <div className="mytrips">
-                <ul>
-                    <li>Transportation</li>
-                    <br />
-                    <li>Daily Life</li>
-                    <br />
-                    <li>Community</li>
-                </ul>
 
-                <h4 className="Tripname"> {props.lists[1]}</h4>
-
-            </div>
+        <Link to={`/show/`}> {' '}
+                <h1 className="tripname"> {props.lists[0]}</h1>
+            </Link>
 
             <div className="mytriptwo">
 
                 <ul>
-                    <li>Transportation</li>
+                    <p>91: Transportation</p>
                     <br />
-                    <li>Daily Life</li>
+                    <p>85: Daily Life</p>
                     <br />
-                    <li>Community</li>
+                    <p>80: Community</p>
                 </ul>
-                <Link to={`/show/`}> {' '}
-                    <h4 className="Tripname"> {props.lists[0]}</h4>
-                </Link>
+
             </div>
+
+        <h1 className="tripname"> {props.lists[1]}</h1>
+            <div className="mytrips">
+            
+                <ul>
+                    <p>86: Transportation</p>
+                    <br />
+                    <p>82:Daily Life</p>
+                    <br />
+                    <p>87: Community</p>
+                </ul>
+
+            </div>
+           
+
+            <h1 className="tripname"> {props.lists[2]}</h1>
 
 
             <div className="mytripthree">
 
                 <ul>
-                    <li>Transportation</li>
+                    <p>85: Transportation</p>
                     <br />
-                    <li>Daily Life</li>
+                    <p>87: Daily Life</p>
                     <br />
-                    <li>Community</li>
+                    <p>82: Community</p>
                 </ul>
-                <h4 className="Tripname"> {props.lists[2]}</h4>
-
             </div>
 
 
