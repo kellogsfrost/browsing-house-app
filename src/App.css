@@ -6,7 +6,16 @@
 }
 
 .transport {
-  height: 20px;
+  height: 30px;
+}
+
+.circle {
+height: 30px;
+width: 30px;
+}
+
+.themes {
+font-size: 40px;
 }
 
 

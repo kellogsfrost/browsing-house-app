@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {ReactComponent as Logo} from './check.svg';
+import {ReactComponent as Circle} from './circle.svg';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import {ReactComponent as Bus} from './bus.svg';
 import {
@@ -107,28 +108,29 @@ import {
                     <Logo className="transport"></Logo>Daily Life
                 </div>
                 <div>
-                    Safety
+                    <Circle className="circle"></Circle>Safety
                 </div>
                 <div>
-                    Health 
+                    <Circle className="circle"></Circle>Health 
                 </div>
                 <div>
-                    Sports/Leisure
+                    <Circle className="circle"></Circle>Sports/Leisure
                 </div>
                 <div>
-                    Entertainment
+                    <Circle className="circle"></Circle>Entertainment
                 </div>
                 <div>
                 <Logo className="transport"></Logo>Community
 
                 </div>
-            </div>
+            
             <footer>
                 Find my area!{''}
                 <Link to={'/show/'}>  
            <input type="submit"></input>
                 </Link>
            </footer>
+           </div>
            </div>
            </>
         )
