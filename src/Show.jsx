@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import MapMarker from './Marker';
+import {ReactComponent as Bus} from './bus.svg';
+import {ReactComponent as Ninja} from './ninja.svg';
+import {ReactComponent as Volley} from './volleyball.svg';
+import {ReactComponent as User} from './users.svg';
+import {ReactComponent as Coffee} from './coffee.svg';
 import axios from 'axios';
 
 
@@ -40,13 +45,21 @@ class Show extends React.Component {
 
 	return (
 			<>
+            <div  className="parkSlope"></div>
+            <div>
+                <Bus className='badge'></Bus>
+                <Ninja className='badge'></Ninja>
+                <Volley className='badge'></Volley>
+                <User className='badge'></User>
+                <Coffee className='badge'></Coffee>
+            </div>
 				<div className="showMap">
 					<Map
 						center={[-73.9442, 40.6782]}
 						style="mapbox://styles/mapbox/streets-v9"
 						containerStyle={{
-							height: '800px',
-							width: '800px'
+							height: '400px',
+							width: '100%'
 						}}>
               {/* Make this render interview location */}
 						<Marker coordinates={[lng, lat]}
@@ -55,7 +68,7 @@ class Show extends React.Component {
 						<MapMarker	/>
 					</Map>
 				</div>
-			</>
+                </>
 		)
 	}
 }	
