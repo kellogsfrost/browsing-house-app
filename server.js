@@ -1,3 +1,5 @@
+import Axios from "axios";
+
 const app = express();
 
 
@@ -6,7 +8,9 @@ app.use(express.json());
 
 
 
-
+app.get('place/api', function(req, res){
+    //Axios.get()
+})
 
 
 
