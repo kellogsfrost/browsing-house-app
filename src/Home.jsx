@@ -51,7 +51,8 @@ import {
 	);
 
 	return (
-			<>
+        <>
+            <div className='background'>
 			  <div>
         <button className='stateButton' onClick={this.showMenu}>
         NYC |
@@ -120,6 +121,7 @@ import {
            <input type="submit"></input>
                 </Link>
            </footer>
+           </div>
            </>
         )
     }
