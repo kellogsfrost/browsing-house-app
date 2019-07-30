@@ -4,16 +4,25 @@ import { Link } from 'react-router-dom'
 const NeighborhoodList = props => (
     <>
 
+        {props.lists.map((list, i) => {
+            return (
+                <div className="Tripflex">
+                    <div key={i} className="mytrips">
+                        <Link to={`/show/`}> {' '}
+                            <h4 className="Tripname">{list}</h4>
+                        </Link>
 
-        {props.props.NeighborhoodList.map()}
-        <div className="neighborhoods">
-            <div className="mytrips">
-                <Link to={`/show/`}> {' '}
-                    <h4 className="Tripname">{props.NeighborhoodList[0]}</h4>
-                </Link>
-                <button >Click</button>
-            </div>
-        </div>
+                    </div>
+                </div>
+
+            )
+        }
+        )
+        }
+
+
+
+
 
     </>
 
