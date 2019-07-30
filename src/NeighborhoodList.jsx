@@ -7,35 +7,35 @@ const NeighborhoodList = props => (
 
         <div className="Tripflex">
 
-        <Link to={`/show/`}> {' '}
+            <Link to={`/show/`}> {' '}
                 <h1 className="tripname"> {props.lists[0]}</h1>
             </Link>
 
             <div className="mytriptwo">
 
                 <ul>
-                    <p>91: Transportation</p>
+                    <p className='p'>91: Transportation</p>
                     <br />
-                    <p>85: Daily Life</p>
+                    <p className='p'>85: Daily Life</p>
                     <br />
-                    <p>80: Community</p>
+                    <p className='p'>80: Community</p>
                 </ul>
 
             </div>
 
-        <h1 className="tripname"> {props.lists[1]}</h1>
+            <h1 className="tripname"> {props.lists[1]}</h1>
             <div className="mytrips">
-            
+
                 <ul>
-                    <p>86: Transportation</p>
+                    <p className="p">86: Transportation</p>
                     <br />
-                    <p>82:Daily Life</p>
+                    <p className='p'>82:Daily Life</p>
                     <br />
-                    <p>87: Community</p>
+                    <p className='p'>87: Community</p>
                 </ul>
 
             </div>
-           
+
 
             <h1 className="tripname"> {props.lists[2]}</h1>
 
@@ -43,11 +43,11 @@ const NeighborhoodList = props => (
             <div className="mytripthree">
 
                 <ul>
-                    <p>85: Transportation</p>
+                    <p className='p' >85: Transportation</p>
                     <br />
-                    <p>87: Daily Life</p>
+                    <p className='p'>87: Daily Life</p>
                     <br />
-                    <p>82: Community</p>
+                    <p className='p'>82: Community</p>
                 </ul>
             </div>
 
