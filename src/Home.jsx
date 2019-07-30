@@ -3,54 +3,56 @@ import {
     BrowserRouter as Router,
     Route,
     Link
+
   } from 'react-router-dom';
   import ReactDOM from 'react-dom'
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-  var element = "far fa-check-circle"
+
 
     class Home extends Component {
     render() {
         return (
             <>
-            <div>
-                <h3>NYC | London | San Fransisco | Berlin</h3>
-            </div>
-           <div>
-               <h4>Queens, Brooklyn, Manhatten, Bronx and Staten Island </h4>
-            </div>
-            
-            <div className="themes">
                 <div>
+
+                    <h3>NYC | London | San Fransisco | Berlin</h3>
                     Transportation 
                     var element = <i class="far fa-check-circle"></i>
                 </div>
                 <div>
-                    Daily Life
+                    <h4>Queens, Brooklyn, Manhatten, Bronx and Staten Island </h4>
                 </div>
-                <div>
-                    Safety
+
+                <div className="themes">
+                    <div>
+                        Transportation
+                    <i class="far fa-check-circle"></i>
+                    </div>
+                    <div>
+                        Daily Life
                 </div>
-                <div>
-                    Health 
+                    <div>
+                        Safety
                 </div>
-                <div>
-                    Sports/Leisure
+                    <div>
+                        Health
                 </div>
-                <div>
-                    Entertainment
+                    <div>
+                        Sports/Leisure
                 </div>
-                <div>
-                    Community
+                    <div>
+                        Entertainment
                 </div>
-            </div>
-            <footer>
-                Find my area!{''}
-                <Link to={'/show/'}>  
-           <input type="submit"></input>
-                </Link>
-           </footer>
-           </>
+                    <div>
+                        Community
+                </div>
+                </div>
+                <footer>
+                    Find my area!{''}
+                    <Link to={'/show/'}>
+                        <input type="submit"></input>
+                    </Link>
+                </footer>
+            </>
         )
     }
 }
